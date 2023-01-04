@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelling 🗺</title>
+  </head>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background: linear-gradient(179.4deg,rgb(253, 240, 233) 2.2%,rgb(255, 194, 203) 96.2%);
+      display: block;
+    }
+
+    h1 {
+      color: #1f6f78;
+      font-size: 30px;
+      line-height: 46px;
+      font-weight: bold;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 { 
+      color: #226b80;
+      font-size: 26px;
+      line-height: 40px;
+      font-weight: normal;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      background: transparent;
+      color: whitesmoke;
+      background: #226b80;
+      font-size: 16px;
+      line-height: 18px;
+      padding: 16px 24px;
+      margin: 0 auto;
+      border: 1px solid whitesmoke;
+      border-radius: 20px;
+      transition: all 200ms ease;
+      text-align: center;
+    }
+
+    button:hover {
+      background: whitesmoke;
+      color: #226b80;
+      border: 1px solid #226b80;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    
+    li {
+        display: inline-table;
+        margin: 0 auto;
+      }
+
+    img {
+      border-radius: 30px;
+      box-shadow: rgba(37, 39, 89, 0.7) 0px 8px 8px 0;
+      max-width: 100%;
+    }
+
+    .paradise {   
+      color: #226b80;
+      font-size: 22px;
+      line-height: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .paradise:hover {
+      color: rgb(207, 97, 133);
+      cursor: pointer;
+    }
+
+    .footer {    
+      color: #226b80;
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    .creator-link {    
+      color: #226b80;
+      text-decoration: none;
+    }
+
+    .creator-link:hover {
+      color: rgb(207, 97, 133);
+      cursor: pointer;
+    }
+
+    .creator {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <h1>🗺 
+        <br>Travelling - my hobby
+    </h1>
+    <h2>
+        I invite you to visit
+        <br>
+        <strong>EXOTIC PARADISES</strong>
+    </h2>
+    <ul>
+      <li>
+        <img
+          src="./images/maldives.jpg"
+          width="325"
+          height="205"
+          alt="Maldives"/>
+        <h3>
+          <a href="https://en.wikipedia.org/wiki/Maldives" class="paradise">Maldives</a>
+        </h3>
+      </li>
+      <li>
+        <img
+          src="./images/mauritius.jpg"
+          width="325"
+          height="205"
+          alt="Mauritius"/>
+        <h3>
+          <a href="https://en.wikipedia.org/wiki/Mauritius" class="paradise">Mauritius</a>
+        </h3>
+      </li>
+      <li>
+        <img
+          src="./images/seychelles.jpg"
+          width="325"
+          height="205"
+          alt="Seychelles"/>
+        <h3>
+          <a href="https://en.wikipedia.org/wiki/Seychelles" class="paradise">Seychelles</a>
+        </h3>
+      </li>
+      <li>
+        <img
+          src="./images/bali.jpg"
+          width="325"
+          height="205"
+          alt="Bali"/>
+        <h3>
+          <a href="https://en.wikipedia.org/wiki/Bali" class="paradise">Bali</a>
+        </h3>
+      </li>
+      <li>
+        <img
+          src="./images/thailand.jpg"
+          width="325"
+          height="205"
+          alt="Thailand"/>
+        <h3>
+          <a href="https://en.wikipedia.org/wiki/Thailand" class="paradise">Thailand</a>
+        </h3>
+      </li>
+      <li>
+        <img
+          src="./images/vietnam.jpg"
+          width="325"
+          height="205"
+          alt="Vietnam"/>
+        <h3>
+          <a href="https://en.wikipedia.org/wiki/Vietnam" class="paradise">Vietnam</a>
+        </h3>
+      </li>
+      <li>
+        <img
+          src="./images/dominican republic.jpg"
+          width="325"
+          height="205"
+          alt="Dominican Republic"/>
+        <h3>
+          <a
+            href="https://en.wikipedia.org/wiki/Dominican_Republic" class="paradise">Dominican Republic</a>        
+        </h3>
+      </li>
+      <li>
+        <img
+          src="./images/mexico.jpg"
+          width="325"
+          height="205"
+          alt="Mexico"/>
+        <h3>
+          <a
+            href="https://en.wikipedia.org/wiki/Mexico" class="paradise">Mexico</a>        
+        </h3>
+      </li>
+    </ul>
+    <button>👆 Choose your paradise</button>
+    <div>
+      <p class="footer">
+        This page was created by
+        <a
+          class="creator-link"
+          href="https://www.instagram.com/deimari/"
+          target="_blank">
+          <span class="creator">Marianna Dei</span>
+        </a>
+      </p>
+    </div>
+    <script>
+      function chooseParadise() {
+        let name = prompt("What is your name?");
+        let paradise = prompt("What exotic paradise in this page would you like to visit?");
+        let emoji = prompt("What is your favourite emoji?");
+        let heading = document.querySelector("button");
+
+        heading.innerHTML =
+        name + ", I invate you to visit " + paradise + emoji;
+      }
+
+      let chooseButton = document.querySelector("button");
+      chooseButton.addEventListener("click", chooseParadise);
+    </script>
+  </body>
+</html>
